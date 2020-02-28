@@ -7,7 +7,7 @@ class Bullet : public GameObject
 public:
 	Bullet();
 	~Bullet();
-
+	float speed = 5;
 	void update(float dt);
 
 };

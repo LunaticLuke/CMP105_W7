@@ -1,9 +1,16 @@
 #include "Player.h"
+#include <Windows.h>
 
 Player::Player()
 {
 	setPosition(200, 200);
 	setSize(sf::Vector2f(100, 100));
+	bullet = &bulletObjects[0];
+	bullet->speed = 1;
+	bullet = &bulletObjects[1];
+	bullet->speed = 0.9;
+	bullet = &bulletObjects[2];
+	bullet->speed = 0.8;
 }
 
 
@@ -23,11 +30,20 @@ void Player::handleInput(float dt)
 
 	if (input->isKeyDown(sf::Keyboard::Enter))
 	{
-		bullet->setPosition(getPosition() + sf::Vector2f(getSize().x / 2, getSize().y /2));
+		for (int i = 0; i < 3; i++)
+		{
+			
+
+			bullet = &bulletObjects[i];
+			bullet->setPosition(getPosition() + sf::Vector2f(getSize().x / 2, getSize().y / 2));
+
+		}
 	}
 }
 
 void Player::update(float dt) 
 {
-	bullet->update(dt);
+	bulletObjects[0].update(dt);
+	bulletObjects[1].update(dt);
+	bulletObjects[2].update(dt);
 }

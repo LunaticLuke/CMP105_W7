@@ -15,5 +15,5 @@ Bullet::~Bullet()
 
 void Bullet::update(float dt)
 {
-	move(velocity*dt);
+	move(velocity*dt*speed);
 }
