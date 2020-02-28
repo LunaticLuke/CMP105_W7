@@ -9,7 +9,8 @@ public:
 	Enemy();
 	~Enemy();
 
-	void update(float dt);
-
+	void update(float dt) override;
+private:
 	float elapsedTime;
-}
+
+};

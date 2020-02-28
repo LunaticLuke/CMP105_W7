@@ -1,6 +1,6 @@
 #include "Enemy.h"
 
-#define THESHOLD 5
+#define THRESHOLD 5
 
 Enemy::Enemy()
 {
@@ -18,7 +18,7 @@ Enemy::~Enemy()
 void Enemy::update(float dt)
 {
 	elapsedTime += dt;
-	if (elapsedTime > THESHOLD)
+	if (elapsedTime > THRESHOLD)
 	{
 		elapsedTime = 0.f;
 		int x = rand() % 600;
