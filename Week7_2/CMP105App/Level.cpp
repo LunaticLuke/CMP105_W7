@@ -23,7 +23,7 @@ void Level::handleInput(float dt)
 // Update game objects
 void Level::update(float dt)
 {
-	
+	player.getBullet()->update(dt);
 }
 
 // Render level

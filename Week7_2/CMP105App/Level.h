@@ -8,6 +8,7 @@
 
 
 
+
 class Level{
 public:
 	Level(sf::RenderWindow* hwnd, Input* in);

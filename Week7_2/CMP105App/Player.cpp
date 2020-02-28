@@ -24,8 +24,6 @@ void Player::handleInput(float dt)
 	if (input->isKeyDown(sf::Keyboard::Enter))
 	{
 		input->setKeyUp(sf::Keyboard::Enter);
-		int x = rand() % 600;
-		int y = rand() % 400;
-		bullet.setPosition((float)x, (float)y);
+		bullet.setPosition(getPosition());
 	}
 }
