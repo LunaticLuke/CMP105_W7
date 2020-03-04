@@ -8,7 +8,7 @@ public:
 	Bit();
 	~Bit();
 
-	void update(float dt);
+	void update(float dt) override;
 
 private:
 
