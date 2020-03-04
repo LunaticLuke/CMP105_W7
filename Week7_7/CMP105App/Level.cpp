@@ -6,9 +6,10 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	input = in;
 
 	// initialise game objects
-	GameObject go;
 	go.setPosition(window->getSize().x/2.f, window->getSize().y / 2.f);
+	go.setOrigin(go.getSize().x / 2, go.getSize().y / 2);
 	go.setSize(sf::Vector2f(100, 100));
+	go.setScale(1, 1);
 	go.setFillColor(sf::Color::Yellow);
 }
 
