@@ -1,4 +1,5 @@
 #include "Player.h"
+#include <Windows.h>
 
 Player::Player()
 {
@@ -28,8 +29,15 @@ void Player::handleInput(float dt)
 		if (!hasFired)
 		{
 			bulletObject = spawn(getPosition() + sf::Vector2f(getSize().x / 2, getSize().y / 2));
+			*bullet = bulletObject;
 			hasFired = true;
+			
 		}
+	}
+	if (input->isKeyDown(sf::Keyboard::R))
+	{
+		Sleep(3);
+		hasFired = false;
 	}
 }
 
