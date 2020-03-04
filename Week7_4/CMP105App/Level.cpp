@@ -31,8 +31,10 @@ void Level::render()
 {
 	beginDraw();
 	window->draw(player);
-	if(player.fired())
-		window->draw(*player.getBullet());
+	if (player.fired())
+	{
+		window->draw(player.getBullet());
+	}
 	endDraw();
 }
 

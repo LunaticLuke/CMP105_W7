@@ -11,13 +11,14 @@ public:
 
 	void handleInput(float dt);
 	void update(float dt);
-	Bullet* spawn(sf::Vector2f pos);
+	Bullet spawn(sf::Vector2f pos);
 	bool fired() { return hasFired; };
-	Bullet* getBullet() {
-		return bullet;
+	Bullet getBullet() {
+		return *bullet;
 	};
 
 private:
+	Bullet bulletObject;
 	Bullet* bullet;
 	bool hasFired;
 };
