@@ -1,6 +1,7 @@
 #pragma once
-#include "Companion.h"
+
 #include "Framework/GameObject.h"
+#include "Companion.h"
 
 class Player : public GameObject
 {
@@ -8,8 +9,8 @@ public:
 	Player();
 	~Player();
 
-	void handleInput(float dt) override;
-	void update(float dt) override;
+	void handleInput(float dt);
+	void update(float dt);
 	Companion* getCompanion()
 	{
 		return &companion;

@@ -18,7 +18,7 @@ void Companion::update(float dt)
 	move(velocity*dt);
 }
 
-void Companion::moveToPlayer(sf::Vector2f playerPos)
+void Companion::moveToPlayer(Player* p)
 {
-	setPosition(playerPos);
+	setPosition(p->getPosition());
 }
